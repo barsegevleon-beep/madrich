@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>זה לא עצלות. זו הנפש שלך שומרת עלייך. | המדריך</title>
+<meta name="robots" content="noindex">
+<style>
+:root { --w: min(94vw, 620px); }
+html, body { margin: 0; padding: 0; background: #d0ebe2; }
+body { display: flex; flex-direction: column; align-items: center; gap: 22px; padding: 20px 12px 90px; box-sizing: border-box; font-family: Arial, sans-serif; }
+.p { width: var(--w); aspect-ratio: 1080 / 1920; border-radius: 10px; overflow: hidden; box-shadow: 0 6px 24px rgba(44,100,81,.28); background: #eef5ef; }
+.p img { width: 100%; height: 100%; display: block; }
+.zoom { display: flex; gap: 8px; position: fixed; bottom: 16px; left: 16px; z-index: 10; }
+.zoom button { font: 600 18px Arial, sans-serif; color: #fff; background: #2c6451; border: 0; border-radius: 22px; min-width: 44px; height: 44px; padding: 0 14px; cursor: pointer; box-shadow: 0 3px 10px rgba(0,0,0,.2); }
+.zoom button:hover { background: #377a73; }
+</style>
+</head>
+<body>
+<div class="zoom">
+<button type="button" onclick="z(1.15)" aria-label="להגדיל">+</button>
+<button type="button" onclick="z(1/1.15)" aria-label="להקטין">−</button>
+<button type="button" onclick="fit()">כל העמוד</button>
+</div>
+<div class="p"><img src="gl0.png" alt="זו לא עצלות, זו הנפש שלך שומרת עלייך."></div>
+<div class="p"><img src="gl1.png" alt="עמוד 1" loading="lazy"></div>
+<div class="p"><img src="gl2.png" alt="עמוד 2: הימנעות לא נובעת מחולשה" loading="lazy"></div>
+<div class="p"><img src="gl3.png" alt="עמוד 3: הנפש מדברת" loading="lazy"></div>
+<div class="p"><img src="gl4.png" alt="עמוד 4: תרגול ליציאה מקפאון" loading="lazy"></div>
+<div class="p"><img src="gl5.png" alt="עמוד 5: הימנעות כמצפן" loading="lazy"></div>
+<div class="p"><img src="gl6.png" alt="עמוד 6: הרצון שלי הוא סימני הדרך לתנועה במציאות" loading="lazy"></div>
+<div class="p"><img src="gl7.png" alt="עמוד 7: תרגול לגילוי רצון מהותי" loading="lazy"></div>
+<div class="p"><img src="gl8.png" alt="עמוד 8: מפת דרכים" loading="lazy"></div>
+<div class="p"><img src="gl9.png" alt="עמוד 9: הצעד הבא" loading="lazy"></div>
+<script>
+function cur(){ return document.querySelector('.p').getBoundingClientRect().width; }
+function z(f){ var w = Math.max(200, Math.min(window.innerWidth - 24, cur() * f)); document.documentElement.style.setProperty('--w', w + 'px'); }
+function fit(){ var w = Math.min(window.innerWidth - 24, (window.innerHeight - 40) * 0.5625); document.documentElement.style.setProperty('--w', w + 'px'); }
+</script>
+</body>
+</html>
