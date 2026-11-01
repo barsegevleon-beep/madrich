@@ -89,7 +89,12 @@ footer { padding: 30px 0 40px; text-align: center; font-size: 15px; color: var(-
 #thanks { display: none; min-height: 100vh; padding: 60px 16px; background: url("forest-path.png") center / cover no-repeat; }
 #thanks:target { display: block; }
 #thanks:target ~ main { display: none; }
-.thanks-box { margin: 0 auto; max-width: 600px; text-align: center; background: rgba(238,245,239,.9); }
+html, body { overflow-x: hidden; max-width: 100%; }
+#thanks { overflow-x: hidden; }
+#thanks h1 { font-size: clamp(30px, 8vw, 52px); }
+#thanks .thanks-box { max-width: min(600px, calc(100vw - 32px)) !important; }
+#thanks .breath p { margin: 0; }
+.thanks-box { width: 100%; min-width: 0; overflow-wrap: break-word; margin: 0 auto; max-width: 600px; text-align: center; background: rgba(238,245,239,.9); }
 .breath { margin: 22px 0; padding: 22px; border-radius: 20px; background: #dcefe7; border: 1px solid rgba(77,168,150,.4); }
 @media (max-width: 480px) {
   body { font-size: 18px; }
@@ -106,11 +111,11 @@ footer { padding: 30px 0 40px; text-align: center; font-size: 15px; color: var(-
 <div id="thanks">
   <div class="thanks-box card">
     <h1>המדריך בדרך אלייך ♥</h1>
+    <div class="breath">
+      <p><b>איזה כיף שבחרת בעצמך ובצעד ראשוני לתנועה מתוך הימנעות!</b></p>
+    </div>
     <p>בדקות הקרובות יגיע אלייך מייל ממני עם המדריך<br><b>"זו לא עצלות. זו הנפש שלך שומרת עלייך."</b></p>
     <p>לא רואה אותו? הציצי בתיקיית הקידומים או הספאם, וגררי אותו לתיבה הראשית - ככה המיילים הבאים שלי יגיעו אלייך.</p>
-    <div class="breath">
-      <p>ועד שהוא מגיע, משהו קטן לנסות עכשיו:<br>שימי יד אחת על הבטן ויד אחת על החזה. שלוש נשימות.<br>ושאלי בשקט, בלי לחכות לתשובה: "ממה אני שומרת עליי עכשיו?"</p>
-    </div>
     <p class="sign">נתראה בתיבת המייל,<br>בר</p>
   </div>
 </div>
