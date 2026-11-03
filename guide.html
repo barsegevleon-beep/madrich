@@ -11,6 +11,10 @@ html, body { margin: 0; padding: 0; background: #d0ebe2; }
 body { display: flex; flex-direction: column; align-items: center; gap: 22px; padding: 20px 12px 90px; box-sizing: border-box; font-family: Arial, sans-serif; }
 .p { width: var(--w); aspect-ratio: 1080 / 1920; border-radius: 10px; overflow: hidden; box-shadow: 0 6px 24px rgba(44,100,81,.28); background: #eef5ef; }
 .p img { width: 100%; height: 100%; display: block; }
+.p { position: relative; }
+.p .lnk { position: absolute; top: 59.3%; height: 4.4%; width: 25%; border-radius: 40px; }
+.p .wa { left: 51.3%; }
+.p .ml { left: 23.8%; }
 .zoom { display: flex; gap: 8px; position: fixed; bottom: 16px; left: 16px; z-index: 10; }
 .zoom button { font: 600 18px Arial, sans-serif; color: #fff; background: #2c6451; border: 0; border-radius: 22px; min-width: 44px; height: 44px; padding: 0 14px; cursor: pointer; box-shadow: 0 3px 10px rgba(0,0,0,.2); }
 .zoom button:hover { background: #377a73; }
@@ -31,7 +35,7 @@ body { display: flex; flex-direction: column; align-items: center; gap: 22px; pa
 <div class="p"><img src="gl6.png" alt="עמוד 6: הרצון שלי הוא סימני הדרך לתנועה במציאות" loading="lazy"></div>
 <div class="p"><img src="gl7.png" alt="עמוד 7: תרגול לגילוי רצון מהותי" loading="lazy"></div>
 <div class="p"><img src="gl8.png" alt="עמוד 8: מפת דרכים" loading="lazy"></div>
-<div class="p"><img src="gl9.png" alt="עמוד 9: הצעד הבא" loading="lazy"></div>
+<div class="p"><img src="gl9.png" alt="עמוד 9: הצעד הבא" loading="lazy"><a class="lnk wa" href="https://wa.me/972546211963" target="_blank" rel="noopener" aria-label="וואטסאפ"></a><a class="lnk ml" href="mailto:bar.segev.leon@gmail.com" aria-label="מייל"></a></div>
 <script>
 function cur(){ return document.querySelector('.p').getBoundingClientRect().width; }
 function z(f){ var w = Math.max(200, Math.min(window.innerWidth - 24, cur() * f)); document.documentElement.style.setProperty('--w', w + 'px'); }
